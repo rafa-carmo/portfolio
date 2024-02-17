@@ -1,19 +1,19 @@
-import type { Metadata } from "next";
-import "./globals.css";
+import type { Metadata } from "next"
+import "./globals.css"
 
 export const metadata: Metadata = {
-  title: "Rafael do Carmo - Desenvolvedor Web",
-  description: "Portfolio de Rafael do Carmo, Desenvolvedor de aplicações web",
-};
+	title: "Rafael do Carmo - Desenvolvedor Web",
+	description: "Portfolio de Rafael do Carmo, Desenvolvedor de aplicações web",
+}
 
 export default function RootLayout({
-  children,
+	children,
 }: Readonly<{
-  children: React.ReactNode;
+	children: React.ReactNode
 }>) {
-  return (
-    <html lang="pt-BR">
-      <body>{children}</body>
-    </html>
-  );
+	return (
+		<html lang="pt-BR" className="dark  bg-background">
+			<body>{children}</body>
+		</html>
+	)
 }
