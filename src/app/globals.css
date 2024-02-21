@@ -37,7 +37,8 @@
   .dark {
     --gradient: #7DE2FC;
 
-    --background: 204 61.75% 5.92%;
+    /* --background: 204 61.75% 5.92%; */
+    --background: 216, 18%, 16%;
     --foreground: 204 9.5% 98.7%;
 
     --muted: 204 47.5% 22.2%;
@@ -52,10 +53,10 @@
     --border: 204 47.5% 22.2%;
     --input: 204 47.5% 22.2%;
 
-    --primary: 204 95% 74%;
+    --primary: 272, 72%, 52%;
     --primary-foreground: 204 9.5% 7.4%;
 
-    --secondary: 204 47.5% 22.2%;
+    --secondary: 11, 98%, 59%;
     --secondary-foreground: 204 9.5% 98.7%;
 
     --accent: 204 47.5% 22.2%;
@@ -65,5 +66,14 @@
     --destructive-foreground: 204 9.5% 98.7%;
 
     --ring: 204 95% 74%;
+  }
+}
+ 
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
   }
 }
