@@ -75,9 +75,9 @@ const Card = ({ title, Icon, selected, setSelected }: CardType) => {
 		<button
 			type="button"
 			className={cn(
-				"w-fit p-4 rounded border-[1px] overflow-hidden group flex flex-col items-center justify-center flex-1 min-w-1/4 text-muted-foreground ",
+				"w-fit p-4 rounded border-[1px] overflow-hidden group flex flex-col items-center justify-center flex-1 min-w-1/4 bg-transparent text-muted-foreground ",
 				{
-					"bg-primary text-foregrond": selected,
+					"bg-primary text-primary-foreground": selected,
 					"hover:bg-primary-foreground": !selected,
 				},
 			)}

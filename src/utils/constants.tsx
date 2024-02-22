@@ -141,6 +141,20 @@ export const projects: CardProjectProps[] = [
 			},
 		],
 	},
+	{
+		title: "Loja de Jogos",
+		description: "Loja de jogos digitais para pc",
+		repository: "https://github.com/rafa-carmo/won-games",
+		image: "https://portfolio.rafaelcarmo.dev/assets/jobs/discord-bot.png",
+		types: ["frontend", "backend"],
+		techs: ["typescript", "nextjs"],
+		links: [
+			{
+				type: "github",
+				url: "https://github.com/rafa-carmo/won-games",
+			},
+		],
+	},
 ]
 
 export const projectIcons = {
