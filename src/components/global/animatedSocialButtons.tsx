@@ -2,7 +2,6 @@
 import { socialLinks } from "@/utils/constants"
 import { motion } from "framer-motion"
 import Link from "next/link"
-import { FiGithub } from "react-icons/fi"
 import { Button } from "../ui/button"
 
 export const AnimatedSocialButtons = () => {

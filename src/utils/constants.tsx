@@ -48,7 +48,7 @@ export const whatIDo: DoCardProps[] = [
 	{
 		title: "Server Manager",
 		icon: <FaServer size={50} className="text-primary opacity-75" />,
-		description: "Manipulação e configuração de servidores linux",
+		description: "Gerenciamento e configuração de servidores linux",
 		details: [
 			{
 				title: "Docker",

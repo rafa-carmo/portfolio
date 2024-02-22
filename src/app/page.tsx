@@ -11,7 +11,7 @@ export default function Home() {
 		<main className="overflow-x-hidden">
 			<Header />
 
-			<section className="container mx-auto pt-24 h-[90vh] grid md:grid-cols-2 place-items-center relative">
+			<section className="container mx-auto pt-24 min-h-[90vh] grid md:grid-cols-2 place-items-center relative">
 				<div className="pespective flex flex-col gap-5 relative z-0">
 					<AnimatedText
 						el="h1"
@@ -40,15 +40,19 @@ export default function Home() {
 				<div className="flex items-center justify-center w-full">
 					<AnimatedText
 						el="h3"
-						className="text-5xl font-bold"
+						className="text-5xl font-bold text-center"
 						once
 						text="O Que faço?"
 					/>
 				</div>
 
-				<div className="pt-20 flex flex-wrap items-start justify-center gap-10">
-					{whatIDo.map((item) => (
-						<CardDemo key={`${item.title}-${item.description}`} {...item} />
+				<div className="py-20 flex flex-wrap items-start justify-center gap-10">
+					{whatIDo.map((item, key) => (
+						<CardDemo
+							key={`${item.title}-${item.description}`}
+							{...item}
+							delay={key}
+						/>
 					))}
 				</div>
 			</section>
