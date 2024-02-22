@@ -1,3 +1,4 @@
+import HoverDevCards from "@/components/cards/sections"
 import { CardDemo } from "@/components/cards/service"
 import { AnimatedSocialButtons } from "@/components/global/animatedSocialButtons"
 import { AnimatedText } from "@/components/global/animatedText"
@@ -56,6 +57,23 @@ export default function Home() {
 					))}
 				</div>
 			</section>
+
+			<section className="container mx-auto min-h-screen">
+				<CurveDivisor />
+
+				<div className="flex items-center justify-center w-full">
+					<AnimatedText
+						el="h3"
+						className="text-5xl font-bold text-center"
+						once
+						text="Últimos Projetos"
+					/>
+				</div>
+
+				<HoverDevCards />
+			</section>
+
+			<section className="h-screen"> </section>
 		</main>
 	)
 }

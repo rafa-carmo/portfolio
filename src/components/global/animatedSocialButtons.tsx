@@ -30,10 +30,15 @@ export const AnimatedSocialButtons = () => {
 					</Link>
 				))}
 			</ul>
-
-			<Button className="w-fit text-white text-lg font-bold border border-transparent hover:border-primary">
-				Download CV
-			</Button>
+			<Link
+				href="https://cdn.discordapp.com/attachments/1130539861644935361/1178763245184622652/Rafael_do_Carmo_da_Silva.pdf"
+				rel="noreferrer"
+				title="Download curriculo"
+			>
+				<Button className="w-fit text-white text-lg font-bold border border-transparent hover:border-primary">
+					Download CV
+				</Button>
+			</Link>
 		</motion.div>
 	)
 }
