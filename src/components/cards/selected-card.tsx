@@ -82,12 +82,14 @@ export function CardProject({
 						{repository && (
 							<Link
 								href={repository}
-								className="absolute top-2 right-2 text-foreground"
+								className="absolute top-2 right-2 text-foreground "
+								target="_blank"
+								rel="noreferrer"
 							>
 								<Button
 									type="button"
 									variant="ghost"
-									className="border border-primary hover:border-transparent"
+									className="border border-primary hover:border-transparent bg-muted backdrop-blur"
 									title="Repositório"
 								>
 									<FiGithub size={20} />
@@ -123,7 +125,7 @@ export function CardProject({
 				</CardContent>
 				<CardFooter className="flex items-center justify-end">
 					{links.map((link) => (
-						<Link href={link.url}>
+						<Link href={link.url} target="_blank" rel="noreferrer">
 							<Button type="button" variant="ghost">
 								{projectIcons[link.type]}
 							</Button>

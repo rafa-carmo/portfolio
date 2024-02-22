@@ -72,10 +72,24 @@ export const whatIDo: DoCardProps[] = [
 
 export const projects: CardProjectProps[] = [
 	{
+		title: "Website Builder",
+		description: "SaaS para construção de websites e gerenciamento de clientes",
+		repository: "https://github.com/rafa-carmo/website-builder",
+		image: "/assets/jobs/website-builder.webp",
+		types: ["frontend"],
+		techs: ["typescript"],
+		links: [
+			{
+				type: "github",
+				url: "https://github.com/rafa-carmo/website-builder",
+			},
+		],
+	},
+	{
 		title: "Mini-Games",
 		description: "Mini Games para rodar diretamente no navegador",
 		repository: "https://github.com/rafa-carmo/mini-games",
-		image: "https://portfolio.rafaelcarmo.dev/assets/jobs/mini-games.png",
+		image: "/assets/jobs/mini-games.webp",
 		types: ["frontend"],
 		techs: ["javascript", "HTML"],
 		links: [
@@ -87,9 +101,9 @@ export const projects: CardProjectProps[] = [
 	},
 	{
 		title: "Bot Discord Documentação",
-		description: "Bot discord mapeador de dados em documentação",
+		description: "Bot de discord para mapear dados dd documentações",
 		repository: "https://github.com/rafa-carmo/mini-games",
-		image: "https://portfolio.rafaelcarmo.dev/assets/jobs/discord-bot.png",
+		image: "/assets/jobs/discord-bot.webp",
 		types: ["backend"],
 		techs: ["nodejs"],
 		links: [
@@ -103,7 +117,7 @@ export const projects: CardProjectProps[] = [
 		title: "Notas Musicais",
 		description: "CLI em python para tons e notas musicais",
 		repository: "https://github.com/rafa-carmo/notas-musicais",
-		image: "https://portfolio.rafaelcarmo.dev/assets/jobs/discord-bot.png",
+		image: "/assets/jobs/notas-musicais.webp",
 		types: ["cli"],
 		techs: ["python"],
 		links: [
@@ -117,7 +131,7 @@ export const projects: CardProjectProps[] = [
 		title: "Manga System",
 		description: "Sistema para leitura de mangas, armazenamento e notificações",
 		repository: "https://github.com/rafa-carmo/Manga-Page",
-		image: "https://portfolio.rafaelcarmo.dev/assets/jobs/discord-bot.png",
+		image: "/assets/jobs/discord-bot.webp",
 		types: ["frontend", "backend", "cli"],
 		techs: ["typescript", "nodejs", "nextjs", "python"],
 		links: [
@@ -131,7 +145,7 @@ export const projects: CardProjectProps[] = [
 		title: "Gerenciador de Senhas",
 		description: "Gerenciador, Organizador e criador de senhas seguras",
 		repository: "https://github.com/rafa-carmo/Password-Manager/",
-		image: "https://portfolio.rafaelcarmo.dev/assets/jobs/discord-bot.png",
+		image: "/assets/jobs/discord-bot.webp",
 		types: ["frontend"],
 		techs: ["typescript", "nextjs"],
 		links: [
@@ -145,7 +159,7 @@ export const projects: CardProjectProps[] = [
 		title: "Loja de Jogos",
 		description: "Loja de jogos digitais para pc",
 		repository: "https://github.com/rafa-carmo/won-games",
-		image: "https://portfolio.rafaelcarmo.dev/assets/jobs/discord-bot.png",
+		image: "/assets/jobs/won-games.webp",
 		types: ["frontend", "backend"],
 		techs: ["typescript", "nextjs"],
 		links: [
