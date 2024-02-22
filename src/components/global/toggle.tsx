@@ -30,7 +30,7 @@ const ToggleTheme = () => {
 							setTheme("light")
 						}}
 					>
-						<FiMoon className="relative z-10 text-lg md:text-sm" />
+						<FiSun className="relative z-10 text-lg md:text-sm" />
 						<span className="relative z-10">Light</span>
 					</button>
 					<button
@@ -42,7 +42,8 @@ const ToggleTheme = () => {
 							setTheme("dark")
 						}}
 					>
-						<FiSun className="relative z-10 text-lg md:text-sm" />
+						<FiMoon className="relative z-10 text-lg md:text-sm" />
+
 						<span className="relative z-10">Dark</span>
 					</button>
 					<div

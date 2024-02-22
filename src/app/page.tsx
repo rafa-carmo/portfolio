@@ -1,11 +1,10 @@
-import { MouseTrackImages } from "@/components/global/animate-bg"
+import { CardDemo } from "@/components/cards/service"
 import { AnimatedSocialButtons } from "@/components/global/animatedSocialButtons"
 import { AnimatedText } from "@/components/global/animatedText"
 import { CurveDivisor } from "@/components/global/curve-divisor"
 import { Header } from "@/components/global/header"
 import { HeroProgramming } from "@/components/icons/HeroCover"
-import { Button } from "@/components/ui/button"
-import { FiGithub } from "react-icons/fi"
+import { whatIDo } from "@/utils/constants"
 
 export default function Home() {
 	return (
@@ -35,7 +34,7 @@ export default function Home() {
 					<HeroProgramming className="text-black" />
 				</div>
 			</section>
-			<section className="container mx-auto h-screen">
+			<section className="container mx-auto">
 				<CurveDivisor />
 
 				<div className="flex items-center justify-center w-full">
@@ -43,8 +42,14 @@ export default function Home() {
 						el="h3"
 						className="text-5xl font-bold"
 						once
-						text="Sobre Mim"
+						text="O Que faço?"
 					/>
+				</div>
+
+				<div className="pt-20 flex flex-wrap items-start justify-center gap-10">
+					{whatIDo.map((item) => (
+						<CardDemo key={`${item.title}-${item.description}`} {...item} />
+					))}
 				</div>
 			</section>
 		</main>
