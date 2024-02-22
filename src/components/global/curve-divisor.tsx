@@ -63,21 +63,24 @@ export function CurveDivisor() {
 		progress = 0
 	}
 	return (
-		<div className="relative h-1 bg-transparent my-10">
-			<div
-				onMouseMove={onMouseMove}
-				onMouseLeave={onMouseLeave}
-				onMouseEnter={mouseManageEnter}
-				className="h-10 relative -top-5 z-[1]"
-			/>
-			<svg className="w-full absolute -top-12">
-				<title>Divisor</title>
-				<path
-					ref={path}
-					className="stroke-1 stroke-primary bg-transparent"
-					fill="none"
+		<>
+			<hr className="h-1 w-full bg-primary md:hidden my-10 rounded-full" />
+			<div className="hidden md:block relative h-1 bg-transparent my-10">
+				<div
+					onMouseMove={onMouseMove}
+					onMouseLeave={onMouseLeave}
+					onMouseEnter={mouseManageEnter}
+					className="h-10 relative -top-5 z-[1]"
 				/>
-			</svg>
-		</div>
+				<svg className="w-full absolute -top-12">
+					<title>Divisor</title>
+					<path
+						ref={path}
+						className="stroke-1 stroke-primary bg-transparent"
+						fill="none"
+					/>
+				</svg>
+			</div>
+		</>
 	)
 }

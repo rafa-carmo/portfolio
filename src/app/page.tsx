@@ -12,8 +12,8 @@ export default function Home() {
 		<main className="overflow-x-hidden">
 			<Header />
 
-			<section className="container mx-auto pt-24 h-[90vh] grid grid-cols-2 place-items-center">
-				<div className="pespective flex flex-col gap-5">
+			<section className="container mx-auto pt-24 h-[90vh] grid md:grid-cols-2 place-items-center relative">
+				<div className="pespective flex flex-col gap-5 relative z-0">
 					<AnimatedText
 						el="h1"
 						className="text-7xl font-bold"
@@ -31,12 +31,13 @@ export default function Home() {
 					</h2>
 					<AnimatedSocialButtons />
 				</div>
-				<div className="pespective-reverse max-w-lg stroke-blackground ">
+				<div className="absolute md:static pespective-reverse max-w-lg stroke-blackground -z-10 opacity-30 md:opacity-100">
 					<HeroProgramming className="text-black" />
 				</div>
 			</section>
 			<section className="container mx-auto h-screen">
 				<CurveDivisor />
+
 				<div className="flex items-center justify-center w-full">
 					<AnimatedText
 						el="h3"
