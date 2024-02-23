@@ -1,6 +1,7 @@
 import type { Metadata } from "next"
 
 import { Toaster } from "@/components/ui/toaster"
+import MenuProvider from "@/providers/menu-provider"
 import { ThemeProvider } from "@/providers/theme-provider"
 import "./globals.css"
 
@@ -23,7 +24,7 @@ export default function RootLayout({
 					enableSystem
 					disableTransitionOnChange
 				>
-					{children}
+					<MenuProvider>{children}</MenuProvider>
 					<Toaster />
 				</ThemeProvider>
 			</body>

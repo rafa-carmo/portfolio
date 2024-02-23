@@ -1,3 +1,4 @@
+import { menuItems } from "@/utils/constants"
 import Link from "next/link"
 import { Logo } from "./logo"
 import { AnimatedHamburgerButton } from "./navbarMenu"
@@ -12,10 +13,11 @@ export function Header() {
 				</aside>
 				<nav className="hidden md:block absolute left-[50%] top-[50%] transform translate-x-[-50%] translate-y-[-50%]">
 					<ul className="flex items-center justify-center gap-8">
-						<Link href={"#home"}>Home</Link>
-						<Link href={"#services"}>Serviços</Link>
-						<Link href={"#projects"}>Projetos</Link>
-						<Link href={"#contact"}>Contato</Link>
+						{menuItems.map((item) => (
+							<li key={`header-${item.name}`}>
+								<Link href={item.href}>{item.name}</Link>
+							</li>
+						))}
 					</ul>
 				</nav>
 				<aside className="hidden md:flex gap-2 items-center">

@@ -6,6 +6,7 @@ import { AnimatedText } from "@/components/global/animatedText"
 import { CurveDivisor } from "@/components/global/curve-divisor"
 import { Footer } from "@/components/global/footer"
 import { Header } from "@/components/global/header"
+import { MobileMenu } from "@/components/global/mobileMenu"
 import { HeroProgramming } from "@/components/icons/HeroCover"
 import { whatIDo } from "@/utils/constants"
 
@@ -13,6 +14,7 @@ export default function Home() {
 	return (
 		<main className="overflow-x-hidden">
 			<Header />
+			<MobileMenu />
 
 			<section
 				className="container mx-auto pt-24 min-h-[90vh] grid md:grid-cols-2 place-items-center relative"
@@ -79,6 +81,8 @@ export default function Home() {
 			</section>
 
 			<section className="container mx-auto py-20" id="contact">
+				<CurveDivisor />
+
 				<div className="flex items-center justify-center w-full">
 					<AnimatedText
 						el="h3"

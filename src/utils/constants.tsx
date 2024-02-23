@@ -209,3 +209,22 @@ export const contacts = [
 		value: "(21) 9 99554-0043",
 	},
 ]
+
+export const menuItems = [
+	{
+		href: "#home",
+		name: "Início",
+	},
+	{
+		href: "#services",
+		name: "Serviços",
+	},
+	{
+		href: "#projects",
+		name: "Projetos",
+	},
+	{
+		href: "#contact",
+		name: "Contato",
+	},
+]
