@@ -37,6 +37,7 @@ export function CurveDivisor() {
 		//biome-ignore lint:
 		const { left, width } = path.current!.getBoundingClientRect()
 		x = (clientX - left) / width
+		if (x <= 0) x = 0.01
 		progress += movementY
 		setPath(progress)
 	}
