@@ -24,6 +24,7 @@ export const AnimatedSocialButtons = () => {
 						<Button
 							variant="ghost"
 							className="rounded-full border border-foreground py-[1.4rem] px-3"
+							data-testid={link.title}
 						>
 							{link.icon}
 						</Button>

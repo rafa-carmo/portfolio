@@ -19,7 +19,7 @@ export function Footer() {
 				</aside>
 				<aside className="">
 					<nav className="grid grid-cols-2 md:grid-cols-4 gap-5 md:gap-2">
-						<ul className="space-y-3">
+						<ul className="space-y-3" data-testid="social-links">
 							<li>
 								<h3 className="text-primary font-bold text-lg pb-5">Links</h3>
 							</li>
@@ -30,23 +30,30 @@ export function Footer() {
 										target="_blank"
 										rel="noreferrer"
 										title={link.title}
+										data-testId={link.url}
 									>
 										{link.title}
 									</Link>
 								</li>
 							))}
 						</ul>
-						<ul className="space-y-3">
+						<ul className="space-y-3" data-testId="menu-links">
 							<li>
 								<h3 className="text-primary font-bold text-lg pb-5">Site</h3>
 							</li>
 							{menuItems.map((item) => (
 								<li key={`footer-${item.name}`}>
-									<Link href={item.href}>{item.name}</Link>
+									<Link
+										href={item.href}
+										data-testId={item.href}
+										title={item.name}
+									>
+										{item.name}
+									</Link>
 								</li>
 							))}
 						</ul>
-						<ul className="space-y-3">
+						<ul className="space-y-3" data-testId="contacts">
 							<li>
 								<h3 className="text-primary font-bold text-lg pb-5">
 									Contatos
@@ -55,6 +62,7 @@ export function Footer() {
 							{contacts.map((contact) => (
 								<li key={contact.value}>
 									<Button
+										data-testId={contact.value}
 										onClick={() => {
 											navigator.clipboard.writeText(contact.value)
 											toast({

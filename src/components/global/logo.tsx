@@ -5,9 +5,10 @@ export function Logo(props: SVGProps<SVGSVGElement>) {
 		<svg
 			xmlns="http://www.w3.org/2000/svg"
 			viewBox="123.798 -25.148 51.501 9.669"
+			data-testid="logo"
 			{...props}
 		>
-			<title>Logo Rafael do Carmo</title>
+			<title data-testid="title">Logo Rafael do Carmo</title>
 			<g
 				fill="none"
 				strokeMiterlimit={10}

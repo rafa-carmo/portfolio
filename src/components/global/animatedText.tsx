@@ -30,7 +30,7 @@ const defaultAnimations = {
 }
 
 export const AnimatedText = ({
-	text = subtitles[0],
+	text,
 	el: Wrapper = "p",
 	className,
 	once,
@@ -40,7 +40,7 @@ export const AnimatedText = ({
 	const controls = useAnimation()
 
 	const [indexText, setIndexText] = useState(0)
-	const [actualText, setActualText] = useState(text)
+	const [actualText, setActualText] = useState(text || subtitles[0])
 	const ref = useRef(null)
 	const isInView = useInView(ref, { amount: 0.5, once })
 
@@ -84,7 +84,9 @@ export const AnimatedText = ({
 
 	return (
 		<Wrapper className={className}>
-			<span className="sr-only">{subtitles.join(" ")}</span>
+			<span className="sr-only" data-testid="sr-only">
+				{text || subtitles.join(",")}
+			</span>
 			<motion.span
 				ref={ref}
 				initial="hidden"
@@ -95,7 +97,7 @@ export const AnimatedText = ({
 				}}
 				aria-hidden
 			>
-				<span className="block">
+				<span className="block" data-testid="span-animated-text">
 					{actualText.split(" ").map((word, wordIndex) => (
 						// biome-ignore lint:
 						<span className="inline-block" key={`${word}-${wordIndex}`}>
