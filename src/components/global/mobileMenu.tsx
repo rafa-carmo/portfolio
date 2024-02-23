@@ -6,6 +6,7 @@ import { stagger, useAnimate } from "framer-motion"
 import Link from "next/link"
 import { useEffect } from "react"
 import { Button } from "../ui/button"
+import { Logo } from "./logo"
 import ToggleTheme from "./toggle"
 
 function useMenuAnimation(isOpen: boolean) {
@@ -69,11 +70,9 @@ export function MobileMenu() {
 					},
 				)}
 				onClick={setOpenClose}
-			>
-				{" "}
-			</div>
-			<div ref={scope} className="fixed top-0 bottom-0 left-0 z-40">
-				<nav className="w-2/4 min-w-[300px] bg-primary-foreground h-full flex flex-col justify-around ">
+			/>
+			<div ref={scope} className="fixed top-14 bottom-0 left-0 z-40">
+				<nav className="w-2/4 min-w-[300px] bg-primary-foreground h-full flex flex-col justify-around md:hidden md:pointer-events-none">
 					<ul className="flex flex-col gap-16">
 						{menuItems.map((item) => (
 							<li key={`mobile-${item.name}`}>

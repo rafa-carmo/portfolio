@@ -18,11 +18,14 @@ export const MenuContext = createContext<ModalContentType>({
 
 const MenuProvider: React.FC<MenuProviderProps> = ({ children }) => {
 	const [isOpen, setIsOpen] = useState(false)
+	const [isMounted, setIsMounted] = useState(false)
+
+	useEffect(() => setIsMounted(true), [])
 
 	const setOpenClose = () => {
 		setIsOpen(!isOpen)
 	}
-
+	if (!isMounted) return null
 	return (
 		<MenuContext.Provider value={{ setOpenClose, isOpen }}>
 			{children}
