@@ -87,7 +87,7 @@ export function ContactForm() {
 								className="rounded-full p-5 bg-lime-600 text-foreground"
 							/>
 							<p className="text-xl">
-								Mensagem recebida, Responderei o mais rapido possível.
+								Mensagem recebida, Responderei o mais breve possível.
 							</p>
 						</motion.div>
 						<motion.div
@@ -151,7 +151,7 @@ export function ContactForm() {
 								)}
 							/>
 							<Button
-								className="mt-4 max-w-[300px] text-foreground"
+								className="mt-4 max-w-[300px] text-primary-foreground bg-primary"
 								disabled={isLoading}
 								type="submit"
 							>
