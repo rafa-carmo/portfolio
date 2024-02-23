@@ -1,8 +1,9 @@
 import { CardProjectProps } from "@/components/cards/selected-card"
 import { DoCardProps } from "@/components/cards/service"
 import { LinkedinIcon } from "lucide-react"
+import { CiMail } from "react-icons/ci"
 import { DiJavascript1 } from "react-icons/di"
-import { FaServer } from "react-icons/fa"
+import { FaServer, FaWhatsapp } from "react-icons/fa"
 import { FaPython } from "react-icons/fa"
 import { FaNodeJs } from "react-icons/fa"
 import { FiGithub } from "react-icons/fi"
@@ -197,3 +198,14 @@ export const defaultAnimations = {
 		},
 	},
 }
+
+export const contacts = [
+	{
+		icon: <CiMail size={32} />,
+		value: "rafaelcarmo143@gmail.com",
+	},
+	{
+		icon: <FaWhatsapp size={32} />,
+		value: "(21) 9 99554-0043",
+	},
+]

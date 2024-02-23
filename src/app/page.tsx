@@ -4,6 +4,7 @@ import { ContactForm } from "@/components/forms/contact"
 import { AnimatedSocialButtons } from "@/components/global/animatedSocialButtons"
 import { AnimatedText } from "@/components/global/animatedText"
 import { CurveDivisor } from "@/components/global/curve-divisor"
+import { Footer } from "@/components/global/footer"
 import { Header } from "@/components/global/header"
 import { HeroProgramming } from "@/components/icons/HeroCover"
 import { whatIDo } from "@/utils/constants"
@@ -13,7 +14,10 @@ export default function Home() {
 		<main className="overflow-x-hidden">
 			<Header />
 
-			<section className="container mx-auto pt-24 min-h-[90vh] grid md:grid-cols-2 place-items-center relative">
+			<section
+				className="container mx-auto pt-24 min-h-[90vh] grid md:grid-cols-2 place-items-center relative"
+				id="home"
+			>
 				<div className="pespective flex flex-col gap-5 relative z-0">
 					<AnimatedText
 						el="h1"
@@ -36,7 +40,7 @@ export default function Home() {
 					<HeroProgramming className="text-black" />
 				</div>
 			</section>
-			<section className="container mx-auto">
+			<section className="container mx-auto py-20" id="services">
 				<CurveDivisor />
 
 				<div className="flex items-center justify-center w-full">
@@ -59,7 +63,7 @@ export default function Home() {
 				</div>
 			</section>
 
-			<section className="container mx-auto min-h-screen">
+			<section className="container mx-auto min-h-screen py-20" id="projects">
 				<CurveDivisor />
 
 				<div className="flex items-center justify-center w-full">
@@ -74,7 +78,7 @@ export default function Home() {
 				<HoverDevCards />
 			</section>
 
-			<section className="container mx-auto min-h-screen py-20">
+			<section className="container mx-auto py-20" id="contact">
 				<div className="flex items-center justify-center w-full">
 					<AnimatedText
 						el="h3"
@@ -87,6 +91,8 @@ export default function Home() {
 					<ContactForm />
 				</div>
 			</section>
+
+			<Footer />
 		</main>
 	)
 }
