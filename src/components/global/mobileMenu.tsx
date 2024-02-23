@@ -71,16 +71,19 @@ export function MobileMenu() {
 				)}
 				onClick={setOpenClose}
 			/>
-			<div ref={scope} className="fixed top-14 bottom-0 left-0 z-40">
+			<div
+				ref={scope}
+				className="fixed top-14 bottom-0 left-0 z-40 rounded-r-2xl overflow-hidden"
+			>
 				<nav className="w-2/4 min-w-[300px] bg-primary-foreground h-full flex flex-col justify-around md:hidden md:pointer-events-none">
-					<ul className="flex flex-col gap-16">
+					<ul className="flex flex-col gap-16 ">
 						{menuItems.map((item) => (
 							<li key={`mobile-${item.name}`}>
 								<Button
 									type="button"
 									variant="link"
 									onClick={setOpenClose}
-									className="no-underline text-4xl font-bold"
+									className="no-underline text-4xl font-bold pespective"
 								>
 									<Link href={item.href}>{item.name}</Link>
 								</Button>
