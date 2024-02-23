@@ -34,7 +34,6 @@ export interface CardProjectProps {
 		url: string
 	}[]
 	delay?: number
-	controls?: AnimationControls
 }
 
 const animations = {
@@ -49,14 +48,13 @@ export function CardProject({
 	links,
 	techs,
 	delay = 0,
-	controls = useAnimation(),
 }: CardProjectProps) {
 	const ref = useRef(null)
 	const isInView = useInView(ref, { amount: 0.5, once: true })
-
+	const controls = useAnimation()
 	useEffect(() => {
 		const show = async () => {
-			await controls.start("visible", { delay: delay / 2, duration: 0.5 })
+			await controls.start("visible", { delay: delay / 10, duration: 0.5 })
 			return
 		}
 		if (isInView) {

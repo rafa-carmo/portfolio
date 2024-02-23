@@ -1,5 +1,6 @@
 import HoverDevCards from "@/components/cards/sections"
 import { CardDemo } from "@/components/cards/service"
+import { ContactForm } from "@/components/forms/contact"
 import { AnimatedSocialButtons } from "@/components/global/animatedSocialButtons"
 import { AnimatedText } from "@/components/global/animatedText"
 import { CurveDivisor } from "@/components/global/curve-divisor"
@@ -73,7 +74,19 @@ export default function Home() {
 				<HoverDevCards />
 			</section>
 
-			<section className="h-screen"> </section>
+			<section className="container mx-auto min-h-screen py-20">
+				<div className="flex items-center justify-center w-full">
+					<AnimatedText
+						el="h3"
+						className="text-5xl font-bold text-center"
+						once
+						text="Deixe sua mensagem"
+					/>
+				</div>
+				<div className="flex items-center justify-center py-20">
+					<ContactForm />
+				</div>
+			</section>
 		</main>
 	)
 }

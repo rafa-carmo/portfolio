@@ -3,23 +3,32 @@
 import { cn } from "@/lib/utils"
 import { projects } from "@/utils/constants"
 import { motion, useAnimation } from "framer-motion"
-import React, { useState } from "react"
+import React, { useEffect, useState } from "react"
 import { IconType } from "react-icons"
 import { CiServer } from "react-icons/ci"
 import { FaTerminal } from "react-icons/fa6"
 import { FiMail } from "react-icons/fi"
 
 import { TfiWorld } from "react-icons/tfi"
-import { CardProject } from "./selected-card"
+import { CardProject, CardProjectProps } from "./selected-card"
 
 const HoverDevCards = () => {
 	const [selected, setSelected] = useState("Frontend")
-	const controls = useAnimation()
+	const [showJobs, setShowJobs] = useState<CardProjectProps[] | null>(
+		projects.filter((proj) =>
+			proj.types.includes(selected.toLocaleLowerCase()),
+		),
+	)
 
-	const handleChange = async (key: string) => {
-		// await controls.start("hidden")
-		setSelected(key)
-	}
+	useEffect(() => {
+		setShowJobs(null)
+
+		setShowJobs(
+			projects.filter((proj) =>
+				proj.types.includes(selected.toLocaleLowerCase()),
+			),
+		)
+	}, [selected])
 	return (
 		<>
 			<motion.div
@@ -30,34 +39,26 @@ const HoverDevCards = () => {
 					title="Frontend"
 					selected={selected === "Frontend"}
 					Icon={TfiWorld}
-					setSelected={handleChange}
+					setSelected={setSelected}
 				/>
 				<Card
 					title="Backend"
 					selected={selected === "Backend"}
 					Icon={CiServer}
-					setSelected={handleChange}
+					setSelected={setSelected}
 				/>
 				<Card
 					title="CLI"
 					selected={selected === "CLI"}
 					Icon={FaTerminal}
-					setSelected={handleChange}
+					setSelected={setSelected}
 				/>
 			</motion.div>
 
 			<div className="pt-20 flex flex-wrap gap-5 items-start justify-center">
-				{projects
-					.filter((proj) => proj.types.includes(selected.toLocaleLowerCase()))
-					.slice(0, 6)
-					.map((project, key) => (
-						<CardProject
-							key={project.title}
-							{...project}
-							delay={key}
-							controls={controls}
-						/>
-					))}
+				{showJobs?.slice(0, 6).map((project, key) => (
+					<CardProject key={project.title} {...project} delay={key} />
+				))}
 			</div>
 		</>
 	)
