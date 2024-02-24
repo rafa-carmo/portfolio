@@ -66,7 +66,7 @@ export function ContactForm() {
 		controlsSuccess.start("visible", { delay: 0.5, duration: 1 })
 	}
 	return (
-		<Card className="w-3/4 shadow shadow-foreground">
+		<Card className="w-full px-5 md:px-0 md:w-3/4 shadow shadow-foreground">
 			<CardHeader>
 				<CardTitle> </CardTitle>
 			</CardHeader>
