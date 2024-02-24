@@ -73,7 +73,10 @@ export function MobileMenu() {
 			/>
 			<div
 				ref={scope}
-				className="fixed top-14 bottom-0 left-0 z-40 rounded-r-2xl overflow-hidden"
+				className={cn(
+					"fixed top-14 bottom-0 left-0 z-40 rounded-r-2xl overflow-hidden",
+					{ "pointer-events-none": !isOpen },
+				)}
 			>
 				<nav className="w-2/4 min-w-[300px] bg-primary-foreground h-full flex flex-col justify-around md:hidden md:pointer-events-none">
 					<ul className="flex flex-col gap-16 ">
