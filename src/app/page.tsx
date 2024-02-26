@@ -8,11 +8,22 @@ import { Footer } from "@/components/global/footer"
 import { Header } from "@/components/global/header"
 import { MobileMenu } from "@/components/global/mobileMenu"
 import { HeroProgramming } from "@/components/icons/HeroCover"
-import { whatIDo } from "@/utils/constants"
+import { projects, whatIDo } from "@/utils/constants"
+import Head from "next/head"
 
 export default function Home() {
 	return (
 		<main className="overflow-x-hidden">
+			<Head>
+				{projects.map((project) => (
+					<link
+						key={`preload-${project.image}`}
+						rel="preload"
+						href={project.image}
+						as="image"
+					/>
+				))}
+			</Head>
 			<Header />
 			<MobileMenu />
 

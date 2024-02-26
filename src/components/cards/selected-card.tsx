@@ -75,7 +75,13 @@ export function CardProject({
 				<CardHeader>
 					<CardTitle className="relative">
 						<div>
-							<img src={image} alt={title} />
+							<img
+								loading="lazy"
+								width="350px"
+								height="150px"
+								src={image}
+								alt={title}
+							/>
 						</div>
 						{repository && (
 							<Link

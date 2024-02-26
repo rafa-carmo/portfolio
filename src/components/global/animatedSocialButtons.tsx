@@ -22,6 +22,9 @@ export const AnimatedSocialButtons = () => {
 						title={link.title}
 					>
 						<Button
+							type="button"
+							title={link.title}
+							aria-label={link.title}
 							variant="ghost"
 							className="rounded-full border border-foreground py-[1.4rem] px-3"
 							data-testid={link.title}
@@ -36,7 +39,12 @@ export const AnimatedSocialButtons = () => {
 				rel="noreferrer"
 				title="Download curriculo"
 			>
-				<Button className="w-fit text-white text-lg font-bold border border-transparent hover:border-primary">
+				<Button
+					type="button"
+					title="Download CV"
+					aria-label="Download CV"
+					className="w-fit text-white text-lg font-bold border border-transparent hover:border-primary"
+				>
 					Download CV
 				</Button>
 			</Link>

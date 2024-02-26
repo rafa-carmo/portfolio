@@ -15,6 +15,9 @@ export const AnimatedHamburgerButton = () => {
 				}}
 			>
 				<motion.button
+					type="button"
+					title="Exibir menu"
+					aria-label="Exibir Menu"
 					initial={false}
 					animate={isOpen ? "open" : "closed"}
 					onClick={setOpenClose}

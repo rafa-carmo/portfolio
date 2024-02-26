@@ -2,12 +2,11 @@
 
 import { cn } from "@/lib/utils"
 import { projects } from "@/utils/constants"
-import { motion, useAnimation } from "framer-motion"
+import { motion } from "framer-motion"
 import React, { useEffect, useState } from "react"
 import { IconType } from "react-icons"
 import { CiServer } from "react-icons/ci"
 import { FaTerminal } from "react-icons/fa6"
-import { FiMail } from "react-icons/fi"
 
 import { TfiWorld } from "react-icons/tfi"
 import { CardProject, CardProjectProps } from "./selected-card"
