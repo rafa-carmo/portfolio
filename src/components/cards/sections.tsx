@@ -74,6 +74,8 @@ const Card = ({ title, Icon, selected, setSelected }: CardType) => {
 	return (
 		<button
 			type="button"
+			title={title}
+			aria-label={title}
 			className={cn(
 				"w-fit p-4 rounded border-[1px] overflow-hidden group flex flex-col items-center justify-center flex-1 min-w-1/4 bg-transparent text-muted-foreground ",
 				{
@@ -83,6 +85,7 @@ const Card = ({ title, Icon, selected, setSelected }: CardType) => {
 			)}
 			onClick={() => setSelected(title)}
 		>
+			<p className="sr-only">{title}</p>
 			<div className="rounded-lg p-2">
 				<Icon className="text-lg " />
 			</div>

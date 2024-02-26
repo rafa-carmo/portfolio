@@ -22,6 +22,8 @@ const ToggleTheme = () => {
 			{selectedTheme ? (
 				<>
 					<button
+						title="Trocar Tema"
+						aria-label="Trocar Tema"
 						type="button"
 						className={`text-sm font-medium flex items-center gap-2 px-3 md:pl-3 md:pr-3.5 py-3 md:py-1.5 transition-colors relative z-10 ${
 							theme === "light" ? "text-white" : "text-foreground"
@@ -34,6 +36,8 @@ const ToggleTheme = () => {
 						<span className="relative z-10">Light</span>
 					</button>
 					<button
+						title="Trocar Tema"
+						aria-label="Trocar Tema"
 						type="button"
 						className={`text-sm font-medium flex items-center gap-2 px-3 md:pl-3 md:pr-3.5 py-3 md:py-1.5 transition-colors relative z-10 ${
 							theme === "dark" ? "text-white" : "text-foreground"

@@ -154,6 +154,8 @@ export function ContactForm() {
 								className="mt-4 max-w-[300px] text-primary-foreground bg-primary"
 								disabled={isLoading}
 								type="submit"
+								title="Enviar Mensagem"
+								aria-label="Enviar Mensagem"
 							>
 								Enviar Mensagem
 							</Button>

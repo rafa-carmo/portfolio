@@ -11,7 +11,6 @@ import { HeroProgramming } from "@/components/icons/HeroCover"
 import { projects, whatIDo } from "@/utils/constants"
 import Head from "next/head"
 
-export const revalidate = 3600
 export default function Home() {
 	return (
 		<main className="overflow-x-hidden">

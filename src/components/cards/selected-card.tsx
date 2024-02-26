@@ -92,10 +92,12 @@ export function CardProject({
 							>
 								<Button
 									type="button"
+									title={`Acesse o Repositório ${title}`}
+									aria-label={`Acesse o Repositório ${title}`}
 									variant="ghost"
 									className="border border-primary hover:border-transparent bg-muted backdrop-blur"
-									title="Repositório"
 								>
+									<p className="sr-only">Repositório {title}</p>
 									<FiGithub size={20} />
 								</Button>
 							</Link>
