@@ -146,7 +146,7 @@ export const projects: CardProjectProps[] = [
 		title: "Manga System",
 		description: "Sistema para leitura de mangas, armazenamento e notificações",
 		repository: "https://github.com/rafa-carmo/Manga-Page",
-		image: "/assets/jobs/discord-bot.webp",
+		image: "/assets/jobs/manga-system.webp",
 		types: ["frontend", "backend", "cli"],
 		techs: ["typescript", "nodejs", "nextjs", "python"],
 		links: [
@@ -160,7 +160,7 @@ export const projects: CardProjectProps[] = [
 		title: "Gerenciador de Senhas",
 		description: "Gerenciador, Organizador e criador de senhas seguras",
 		repository: "https://github.com/rafa-carmo/Password-Manager/",
-		image: "/assets/jobs/discord-bot.webp",
+		image: "/assets/jobs/password-manager.webp",
 		types: ["frontend"],
 		techs: ["typescript", "nextjs"],
 		links: [
