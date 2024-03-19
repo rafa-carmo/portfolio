@@ -3,12 +3,10 @@ import { DoCardProps } from "@/components/cards/service"
 import { LinkedinIcon } from "lucide-react"
 import { CiMail } from "react-icons/ci"
 import { DiJavascript1 } from "react-icons/di"
-import { FaServer, FaWhatsapp } from "react-icons/fa"
-import { FaPython } from "react-icons/fa"
-import { FaNodeJs } from "react-icons/fa"
+import { FaNodeJs, FaPython, FaServer, FaWhatsapp } from "react-icons/fa"
 import { FiGithub } from "react-icons/fi"
-import { TbBrandTypescript } from "react-icons/tb"
-import { TbBrandNextjs } from "react-icons/tb"
+import { MdOutlineAutorenew } from "react-icons/md"
+import { TbBrandNextjs, TbBrandTypescript } from "react-icons/tb"
 import { TfiWorld } from "react-icons/tfi"
 import { TiHtml5 } from "react-icons/ti"
 
@@ -66,6 +64,22 @@ export const whatIDo: DoCardProps[] = [
 				title: "Linux",
 				description:
 					"Configuração de firewall, serviços e gerenciamento de servidores.",
+			},
+		],
+	},
+	{
+		title: "Automação",
+		icon: <MdOutlineAutorenew size={50} className="text-primary opacity-75" />,
+		description: "Automação de tarefas repetitivas",
+		details: [
+			{
+				title: "Scrapping",
+				description: "Coleta de dados de sites",
+			},
+			{
+				title: "Manipulação de dados",
+				description:
+					"Filtragem, separação e organização de dados em planilhas ou database",
 			},
 		],
 	},
