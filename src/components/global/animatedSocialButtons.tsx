@@ -35,7 +35,7 @@ export const AnimatedSocialButtons = () => {
 				))}
 			</ul>
 			<Link
-				href="https://cdn.discordapp.com/attachments/1130539861644935361/1178763245184622652/Rafael_do_Carmo_da_Silva.pdf"
+				href="https://onedrive.live.com/view.aspx?resid=78F371729DEC1A0E!221404&authkey=!AA9HCGddPYjDpRg"
 				rel="noreferrer"
 				title="Download curriculo"
 			>
