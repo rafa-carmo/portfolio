@@ -27,6 +27,11 @@ export const socialLinks = [
 		url: "https://www.linkedin.com/in/rafael-do-carmo-web-developer/",
 		title: "Linkedin",
 	},
+	{
+		icon: <FaWhatsapp size={32} />,
+		url: "https://wa.me/5521960194546",
+		title: "Whatsapp"
+	}
 ]
 
 export const whatIDo: DoCardProps[] = [
@@ -220,7 +225,7 @@ export const contacts = [
 	},
 	{
 		icon: <FaWhatsapp size={32} />,
-		value: "(21) 9 99554-0043",
+		value: "(21) 9 6019-4546",
 	},
 ]
 
