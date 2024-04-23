@@ -59,9 +59,9 @@ export function ContactForm() {
 	const isLoading = form.formState.isLoading
 
 	const handleSubmit = async (values: z.infer<typeof ContactFormSchema>) => {
+		setDisableForm(true)
 		const sendedMessage = await sendMessage(values)
 		if (!sendedMessage) return
-		setDisableForm(true)
 		controls.start("hidden")
 		controlsSuccess.start("visible", { delay: 0.5, duration: 1 })
 	}
