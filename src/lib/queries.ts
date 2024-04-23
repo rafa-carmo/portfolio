@@ -9,18 +9,19 @@ interface MessageProps {
 }
 
 export async function sendMessage(msg: MessageProps) {
+	let mailError = false
 	try {
 		await sendMail(msg)
 	} catch (e) {
 		console.error("error on send to email:", e)
-		return false
+		mailError = true
 	}
 
 	try {
 		await sendDiscord(msg)
 	} catch (e) {
 		console.error("error on send to discord:", e)
-		return false
+		if (mailError) return false
 	}
 
 	return true
