@@ -21,8 +21,8 @@ A Next.js TypeScript portfolio.
 
 Run the following commands inside the project folder:
 
-1. `yarn`
-2. `yarn dev`
+1. `pnpm`
+2. `pnpm dev`
 
 To view the project open `http://localhost:3000`
 
