@@ -29,7 +29,7 @@ export const socialLinks = [
 	},
 	{
 		icon: <FaWhatsapp size={32} />,
-		url: "https://wa.me/5521960194546",
+		url: "https://wa.me/5521995540043",
 		title: "Whatsapp"
 	}
 ]
@@ -225,7 +225,7 @@ export const contacts = [
 	},
 	{
 		icon: <FaWhatsapp size={32} />,
-		value: "(21) 9 6019-4546",
+		value: "(21) 9 9554-0043",
 	},
 ]
 
